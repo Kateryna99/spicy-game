@@ -1,0 +1,98 @@
+@import 'variables.scss';
+
+@mixin onTabletAndUp {
+  @media (min-width: 768px) {
+    @content;
+  }
+}
+
+@mixin onLaptopAndUp {
+  @media (min-width: 1024px) {
+    @content;
+  }
+}
+
+@mixin onDesktopAndUp {
+  @media (min-width: 1440px) {
+    @content;
+  }
+}
+
+@mixin exceptLastChild {
+  &:not(:last-child) {
+    @content;
+  }
+}
+
+@mixin onlyLastChild {
+  &:last-child {
+    @content;
+  }
+}
+
+@mixin before {
+  &::before {
+    content: '';
+    @content;
+  }
+}
+
+@mixin after {
+  &::after {
+    content: '';
+    @content;
+  }
+}
+
+@mixin onHover {
+  &:hover {
+    @content;
+  }
+}
+
+@mixin onActive {
+  &:active {
+    @content;
+  }
+}
+
+@mixin titleMain {
+  font-size: $text-32;
+  font-weight: $fontWeightSemiBold;
+  line-height: $lineHeightAdditional;
+
+  color: $colorWhite;
+
+  @include onTabletAndUp {
+    font-size: $text-44;
+  }
+
+  @include onLaptopAndUp {
+    font-size: $text-52;
+  }
+
+  @include onDesktopAndUp {
+    font-size: $text-64;
+  }
+}
+
+@mixin titleSmall {
+  font-size: $text-24;
+  font-weight: $fontWeightSemiBold;
+
+  color: $colorWhite;
+
+  @include onTabletAndUp {
+    font-size: $text-32;
+  }
+
+  @include onLaptopAndUp {
+    font-size: $text-36;
+  }
+
+  @include onDesktopAndUp {
+    font-size: $text-44;
+  }
+}
+
+

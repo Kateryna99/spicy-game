@@ -1,0 +1,25 @@
+@import '../../../styles/generals';
+
+.pagination {
+  display: none;
+
+  @include onLaptopAndUp {
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+  }
+}
+
+.paginationBullet {
+  width: 16px;
+  height: 16px;
+
+  border-radius: 50%;
+  background-color: #584A55;
+
+  transition-duration: $transitionDuration;
+
+  &.active {
+   background-color: $colorPrimary;
+  }
+}

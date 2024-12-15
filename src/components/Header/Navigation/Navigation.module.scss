@@ -1,0 +1,101 @@
+@import '../../../styles/generals';
+
+.navigation {
+  position: fixed;
+  top: 65px;
+  left: 0;
+  z-index: 9;
+
+  width: 100vw;
+  height: calc(100vh - 65px);
+
+  background-color: $colorBackground;
+
+  transform: translateX(100%);
+
+  transition-duration: 0.5s;
+
+  &.active {
+    transform: translateX(0);
+  }
+
+  @include onLaptopAndUp {
+    position: relative;
+    top: unset;
+    left: unset;
+
+    width: max-content;
+    height: auto;
+
+    background-color: transparent;
+
+    transform: unset;
+  }
+
+}
+
+.wrapper {
+  padding: 1rem 0;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+
+  @include onTabletAndUp {
+    gap: 2.5rem;
+  }
+
+  @include onLaptopAndUp {
+    padding: 0;
+
+    flex-direction: row;
+  }
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+
+  @include onLaptopAndUp {
+    flex-direction: row;
+    gap: 2.7rem;
+  }
+}
+
+.link {
+  position: relative;
+
+  font-size: $text-16;
+  font-weight: $fontWeightMedium;
+  color: $colorWhite;
+
+  @include before {
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+
+    width: 0;
+    height: 1px;
+
+    background-color: $colorWhite;
+
+    transition-duration: 0.3s;
+  }
+
+  @include onHover {
+    &::before {
+      width: 100%;
+    }
+  }
+
+  @include onTabletAndUp {
+    font-size: $text-22;
+  }
+
+  @include onLaptopAndUp {
+    font-size: $text-18;
+  }
+}

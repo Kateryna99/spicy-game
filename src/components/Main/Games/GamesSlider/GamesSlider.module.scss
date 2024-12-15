@@ -1,0 +1,12 @@
+@import '../../../../styles/generals';
+
+.container {
+  display: none;
+
+  @include onLaptopAndUp {
+    display: block;
+  }
+}
+.slider {
+  height: 800px;
+}

@@ -1,0 +1,81 @@
+@import '../../../../styles/generals';
+
+.languages {
+  position: relative;
+
+  display: none;
+
+  @include onLaptopAndUp {
+    display: flex;
+    align-items: flex-start;
+
+    &:hover {
+      .languageList {
+         opacity: 1;
+         visibility: visible;
+
+         transform: translateY(0);
+      }
+    }
+  }
+}
+
+.languageItem {
+  width: 42px;
+  height: 42px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border: 1px solid #584A55;
+  border-radius: 50%;
+
+  position: relative;
+
+  cursor: pointer;
+
+  transition-duration: $transitionDuration;
+
+  &.active {
+    border-color: $colorPrimary;
+
+    .text {
+      color: $colorPrimary;
+    }
+  }
+
+  @include onHover {
+    border-color: #730939;
+
+    .text {
+      color: #730939;
+    }
+  }
+}
+
+.text {
+  text-transform: uppercase;
+
+  color: $colorWhite;
+
+  transition-duration: $transitionDuration;
+}
+
+.languageList {
+  position: absolute;
+  top: 47px;
+  left: 0;
+  z-index: 3;
+
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+
+  opacity: 0;
+  visibility: hidden;
+
+  transform: translateY(-20px);
+
+  transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s linear 0.3s;
+}

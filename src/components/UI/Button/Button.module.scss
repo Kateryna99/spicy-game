@@ -1,0 +1,52 @@
+@import '../../../styles/generals';
+
+.button {
+  max-width: 215px;
+  width: 100%;
+
+  padding: 7px 10px;
+
+  display: none;
+  justify-content: center;
+  align-items: center;
+
+  font-size: $text-18;
+  font-weight: $fontWeightSemiBold;
+  text-transform: uppercase;
+
+  border-radius: 48px;
+
+  color: $colorWhite;
+  background-color: $colorPrimary;
+
+  transition: $transitionDuration;
+
+  @include onHover {
+    filter: brightness(0.8);
+  }
+
+  @include onActive {
+    filter: brightness(1);
+  }
+
+  @include onLaptopAndUp {
+    display: flex;
+  }
+
+  &.secondary {
+    max-width: 230px;
+
+    display: flex;
+
+    text-transform: capitalize;
+
+    background-color: $colorWhite;
+    color: $colorPrimary;
+
+    @include onTabletAndUp {
+      max-width: 285px;
+
+      font-size: $text-24;
+    }
+  }
+}

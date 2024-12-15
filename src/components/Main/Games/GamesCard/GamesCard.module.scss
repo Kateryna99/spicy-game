@@ -1,0 +1,104 @@
+@import '../../../../styles/generals';
+
+.gameCard {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  @include onLaptopAndUp {
+    height: 700px;
+
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    align-items: center;
+  }
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.subtitle {
+  font-size: $text-14;
+  color: $colorPrimary;
+
+  @include onTabletAndUp {
+    font-size: $text-16;
+  }
+}
+
+.title {
+  @include titleMain;
+}
+
+.text {
+  max-width: 640px;
+  width: 100%;
+
+  @include exceptLastChild {
+    margin-bottom: 40px;
+  }
+
+  @include onLaptopAndUp {
+    max-width: 450px;
+  }
+}
+
+.body {
+  position: relative;
+
+  padding: 50px;
+
+  @include before {
+    position: absolute;
+    bottom: 15%;
+    left: 50%;
+    z-index: -1;
+
+    width: 250px;
+    height: 240px;
+
+    display: block;
+
+    filter: blur(66px);
+
+    background-color: $colorPrimary;
+
+    transform: translateX(-50%);
+
+    @include onTabletAndUp {
+      width: 450px;
+      height: 400px;
+
+      filter: blur(80px);
+    }
+
+    @include onLaptopAndUp {
+      left: 45%;
+      bottom: 15%;
+
+      width: 270px;
+      height: 250px;
+    }
+  }
+
+  @include onTabletAndUp {
+    padding: 80px;
+  }
+
+  @include onLaptopAndUp {
+    padding: 20px;
+
+    height: 75vh;
+    max-height: 620px;
+  }
+}
+
+.gameImg {
+  width: 100%;
+  height: 100%;
+
+  object-fit: contain;
+}

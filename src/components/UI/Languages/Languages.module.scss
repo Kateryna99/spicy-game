@@ -1,0 +1,46 @@
+@import "../../../styles/generals/index";
+
+.languages {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+
+  @include onTabletAndUp {
+    gap: 2rem;
+  }
+
+  @include onLaptopAndUp {
+    display: none;
+  }
+}
+
+.languageItem {
+  width: 42px;
+  height: 42px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border-radius: 50%;
+  border: 2px solid #584A55;
+
+  transition-duration: $transitionDuration;
+
+  &.active {
+    border-color: $colorPrimary;
+
+    .text {
+      color: $colorPrimary;
+    }
+  }
+}
+
+.text {
+  text-transform: uppercase;
+
+  font-size: $text-18;
+  font-weight: $fontWeightMedium;
+  color: $colorWhite;
+}

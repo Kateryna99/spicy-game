@@ -1,0 +1,63 @@
+@import '../../../styles/generals';
+
+.wrapper {
+  padding: 60px 0;
+
+  @include onLaptopAndUp {
+    padding-bottom: 0;
+  }
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+
+  @include exceptLastChild {
+    margin-bottom: 50px;
+  }
+
+  @include onLaptopAndUp {
+    gap: 13px;
+
+    @include exceptLastChild {
+      margin-bottom: 40px;
+    }
+  }
+}
+
+.title {
+  @include titleSmall;
+
+  color: $colorPrimary;
+}
+
+.text {
+  max-width: 750px;
+  width: 100%;
+
+  font-size: $text-14;
+  text-align: center;
+
+  @include onTabletAndUp {
+    font-size: $text-16;
+  }
+
+  @include onLaptopAndUp {
+    font-size: $text-22;
+  }
+}
+
+.list {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  align-items: center;
+  justify-items: center;
+  gap: 1.5rem;
+
+  @include onLaptopAndUp {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 2.3rem;
+  }
+}

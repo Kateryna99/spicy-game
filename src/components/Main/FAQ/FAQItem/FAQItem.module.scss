@@ -1,0 +1,101 @@
+@import '../../../../styles/generals';
+
+.FAQItem {
+  padding: 16px;
+
+  display: flex;
+  flex-direction: column;
+
+  background-color: rgba(255, 255, 255, 0.1);
+
+  border-radius: 8px;
+
+  cursor: pointer;
+
+  @include onHover {
+    .questionIcon {
+      transform: scale(1.2);
+    }
+  }
+}
+
+.question {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+
+  transition-duration: $transitionDuration ease-in-out;
+
+  &.active {
+    margin-bottom: 1rem;
+  }
+}
+
+.questionTitle {
+  font-weight: $fontWeightMedium;
+  color: $colorWhite;
+
+  @include onLaptopAndUp {
+    font-size: $text-24;
+  }
+}
+
+.questionIcon {
+  position: relative;
+
+  width: 40px;
+  height: 40px;
+
+  flex-shrink: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border-radius: 50%;
+
+  background-color: #FFFFFF21;
+
+  transition-duration: $transitionDuration;
+
+  &::before, &::after {
+    content: "";
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    height: 1px;
+    width: 10px;
+
+    transform: translate(-50%, -50%);
+
+    background-color: $colorWhite;
+  }
+
+  &::after {
+    transform: translate(-50%, -50%) rotate(-90deg);
+
+    transition: opacity $transitionDuration ease-in-out;
+  }
+
+  &.active {
+    &::after {
+      opacity: 0;
+    }
+  }
+}
+
+.content {
+  overflow: hidden;
+
+  transition: height $transitionDuration ease-in-out, padding $transitionDuration ease-in-out;
+}
+
+.answerText {
+  font-size: $text-14;
+
+  @include onLaptopAndUp {
+    font-size: $text-18;
+  }
+}

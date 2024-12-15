@@ -1,0 +1,86 @@
+{
+  "buttons": {
+    "play": "Get spicy play",
+    "download": "Download"
+  },
+  "headerNavigation": {
+    "home": "Home",
+    "games": "Games",
+    "faq": "FAQ"
+  },
+  "hero": {
+    "title": "Rediscover each other!",
+    "desc": "Dive into playful challenges that bring you closer and add spark to your relationship"
+  },
+  "advantages": {
+    "title": "More than just a game",
+    "desc": "Spicy Play is a new way to get closer to your partner. Easily explore new aspects of each other and open up together in a safe and fun way.",
+    "cards": {
+      "connect": {
+        "title": "New Way to Connect",
+        "desc": "We offer a unique way to explore new sides of your relationship. With engaging tasks, you’ll discover deeper connections with your partner."
+      },
+      "exploration": {
+        "title": "Safe Space for Exploration",
+        "desc": "Provide a safe environment for open conversations and playful exploration. It’s a place to be real with each other"
+      },
+      "fun": {
+        "title": "Interactive and Fun",
+        "desc": "Makes connection fun and easy. With a game-like format, it adds spontaneity and joy to your relationship"
+      }
+    }
+  },
+  "games": {
+    "title": "Games",
+    "scenario": {
+      "title": "Scenario",
+      "desc": "Immerse yourself in unique situations that will bring you closer together and spice up your relationship. Choose roles, immerse yourself in scenarios, and discover new facets of each other"
+    },
+    "questions": {
+      "title": "Questions",
+      "desc": "Immerse yourself in unique situations that will bring you closer together and spice up your relationship. Choose roles, immerse yourself in scenarios, and discover new facets of each other"
+    },
+    "quest": {
+      "title": "Quest",
+      "desc": "Immerse yourself in unique situations that will bring you closer together and spice up your relationship. Choose roles, immerse yourself in scenarios, and discover new facets of each other"
+    },
+    "NeverHaveIEver": {
+      "title": "Never Have I Ever",
+      "desc": "Immerse yourself in unique situations that will bring you closer together and spice up your relationship. Choose roles, immerse yourself in scenarios, and discover new facets of each other"
+    },
+    "truthOrDare": {
+      "title": "Truth or Dare",
+      "desc": "Immerse yourself in unique situations that will bring you closer together and spice up your relationship. Choose roles, immerse yourself in scenarios, and discover new facets of each other"
+    }
+  },
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "question1": {
+      "title": "Who is this game for?",
+      "desc": "This game is for anyone who wants to connect with their partner and explore new aspects of their relationship. It’s a fun and interactive way to get to know each other better."
+    },
+    "question2": {
+      "title": "Who is this game for?",
+      "desc": "This game is for anyone who wants to connect with their partner and explore new aspects of their relationship. It’s a fun and interactive way to get to know each other better."
+    },
+    "question3": {
+      "title": "What game modes are available?",
+      "desc": "Vestibulum tempus imperdiet sem ac porttitor. Vivamus pulvinar commodo orci, suscipit porttitor velit elementum non. Fusce nec pellentesque erat, id lobortis nunc. Donec dui leo, ultrices quis turpis nec, sollicitudin sodales tortor."
+    },
+    "question4": {
+      "title": "Can I adjust the intensity of the tasks?",
+      "desc": "Vestibulum tempus imperdiet sem ac porttitor. Vivamus pulvinar commodo orci, suscipit porttitor velit elementum non. Fusce nec pellentesque erat, id lobortis nunc. Donec dui leo, ultrices quis turpis nec, sollicitudin sodales tortor."
+    },
+    "question5": {
+      "title": "What if I don’t want to complete a certain task?",
+      "desc": "Vestibulum tempus imperdiet sem ac porttitor. Vivamus pulvinar commodo orci, suscipit porttitor velit elementum non. Fusce nec pellentesque erat, id lobortis nunc. Donec dui leo, ultrices quis turpis nec, sollicitudin sodales tortor."
+    }
+  },
+  "info": {
+    "title": "Ready to transform your relationship?",
+    "desc": "Spicy Play is your gateway to fun, connection, and unforgettable moments together. Don’t miss the chance to bring excitement back to your evenings!"
+  },
+  "footer": {
+    "followUs": "Follow us"
+  }
+}
