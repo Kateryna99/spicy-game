@@ -15,7 +15,7 @@ export const FAQItem = ({question, answer}) => {
         if (answerRef.current) {
             setHeight(answerRef.current.getBoundingClientRect().height)
         }
-    }, []);
+    }, [answer]);
 
     return (
         <div
