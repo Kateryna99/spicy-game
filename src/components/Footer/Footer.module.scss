@@ -41,6 +41,7 @@
   color: $colorPrimary;
 
   text-transform: uppercase;
+  text-align: center;
 
   @include onTabletAndUp {
     color: $colorWhite;
