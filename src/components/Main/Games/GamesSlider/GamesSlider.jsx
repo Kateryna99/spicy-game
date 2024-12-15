@@ -13,9 +13,9 @@ export const GamesSlider = ({gamesList}) => {
     const [activeIndex, setActiveIndex] = useState(0);
     const swiperRef = useRef(null);
 
-    /*const handleSlideChange = swiper => {
+    const handleSlideChange = swiper => {
         setActiveIndex(swiper.realIndex);
-    };*/
+    };
 
     return (
         <div className={styles.container}>
@@ -24,7 +24,7 @@ export const GamesSlider = ({gamesList}) => {
                 modules={[Autoplay]}
                 loop={true}
                 slidesPerView="auto"
-                /*onSlideChange={handleSlideChange}*/
+                onSlideChange={handleSlideChange}
                 autoplay={{
                     delay: 3000,
                     disableOnInteraction: false,
