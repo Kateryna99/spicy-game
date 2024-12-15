@@ -64,9 +64,11 @@
 
 .languageList {
   position: absolute;
-  top: 47px;
+  top: 42px;
   left: 0;
   z-index: 3;
+
+  padding-top: 5px;
 
   display: flex;
   flex-direction: column;
