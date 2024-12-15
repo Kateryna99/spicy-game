@@ -7,7 +7,7 @@ export const Pagination = ({activeIndex, sliderList=[], setActiveIndex, swiperRe
         setActiveIndex(index);
 
         if (swiperRef) {
-            swiperRef.current.swiper.slideToLoop(index, 300);
+            swiperRef.current.swiper.slideTo(index);
         }
     };
 

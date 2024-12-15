@@ -22,7 +22,6 @@ export const GamesSlider = ({gamesList}) => {
             <Swiper
                 ref={swiperRef}
                 modules={[Autoplay]}
-                loop={true}
                 slidesPerView="auto"
                 onSlideChange={handleSlideChange}
                 autoplay={{
