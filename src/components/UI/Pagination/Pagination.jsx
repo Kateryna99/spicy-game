@@ -2,7 +2,7 @@ import styles from "./Pagination.module.scss";
 
 import classNames from "classnames";
 
-export const Pagination = ({activeIndex, sliderList, setActiveIndex, swiperRef = null}) => {
+export const Pagination = ({activeIndex, sliderList=[], setActiveIndex, swiperRef = null}) => {
     const handlePaginationClick = index => {
         setActiveIndex(index);
 
