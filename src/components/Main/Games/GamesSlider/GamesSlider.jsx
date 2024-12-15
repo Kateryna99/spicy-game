@@ -23,7 +23,7 @@ export const GamesSlider = ({gamesList}) => {
                 ref={swiperRef}
                 modules={[Autoplay]}
                 loop={true}
-                slidesPerView={1}
+                slidesPerView="auto"
                 /*onSlideChange={handleSlideChange}*/
                 autoplay={{
                     delay: 3000,
