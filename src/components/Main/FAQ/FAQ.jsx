@@ -9,12 +9,15 @@ import {FAQList} from "@/constants/FAQList";
 import styles from './FAQ.module.scss';
 
 export const FAQ = () => {
-    const [isOpen,setIsOpen] = useState(false);
+    const [isOpen, setIsOpen] = useState(false);
 
     const t = useTranslations("faq");
 
     return (
-        <section className={styles.FAQ} onClick={() => setIsOpen(!isOpen)}>
+        <section
+            className={styles.FAQ}
+            id='faq'
+            onClick={() => setIsOpen(!isOpen)}>
             <div className={styles.wrapper}>
                 <div className='container'>
                     <div className={styles.content}>

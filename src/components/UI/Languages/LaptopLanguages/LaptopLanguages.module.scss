@@ -46,10 +46,10 @@
   }
 
   @include onHover {
-    border-color: #730939;
+    border-color: $colorWhite;
 
     .text {
-      color: #730939;
+      color: $colorWhite;
     }
   }
 }

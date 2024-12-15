@@ -7,7 +7,7 @@ import {GamesSlider} from "@main/Games/GamesSlider/GamesSlider";
 
 export const Games = () => {
     return (
-        <div className={styles.games}>
+        <div className={styles.games} id='games'>
             <div className={styles.wrapper}>
                 <div className='container'>
                     <div className={styles.gamesList}>
