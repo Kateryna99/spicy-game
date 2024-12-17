@@ -21,7 +21,7 @@ export const GamesCard = ({title, img, description, rotateDegree, activeIndex, s
             <div className={styles.body}>
                <Image
                    src={img}
-                   alt='Game instalation'
+                   alt={t(title)}
                    width={300}
                    height={500}
                    className={styles.gameImg}

@@ -1,4 +1,11 @@
 {
+  "alt": {
+    "logo": "Spicy Play Logo",
+    "insta": "Instagram icon",
+    "googlePlay": "Google Play icon",
+    "appStore": "App Store icon",
+    "heroBanner": "Spicy Play Banner"
+  },
   "buttons": {
     "play": "Get spicy play",
     "download": "Download"

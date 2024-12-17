@@ -14,7 +14,7 @@ export const Footer = () => {
                     <a href='/' className={styles.logo}>
                         <Image
                             src='/icons/logo.svg'
-                            alt='Logo Spicy Play'
+                            alt={t('alt.logo')}
                             width={109}
                             height={52}
                         />
@@ -26,7 +26,7 @@ export const Footer = () => {
                         <a href='/' className={styles.link}>
                             <Image
                                 src={'/icons/insta.svg'}
-                                alt='Instagram icon'
+                                alt={t('alt.insta')}
                                 width={20}
                                 height={20}
                             />
@@ -37,7 +37,7 @@ export const Footer = () => {
                         <Link href='/' className={styles.marketButton}>
                             <Image
                                 src='/images/google_play.png'
-                                alt='Go to Google Play'
+                                alt={t('alt.googlePlay')}
                                 width={155}
                                 height={45}
                             />
@@ -46,7 +46,7 @@ export const Footer = () => {
                         <Link href='/' className={styles.marketButton}>
                             <Image
                                 src='/images/app_store.png'
-                                alt='Go to App Store'
+                                alt={t('alt.appStore')}
                                 width={155}
                                 height={45}
                             />

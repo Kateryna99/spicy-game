@@ -9,7 +9,7 @@ export const AdvantagesCard = ({icon, title, description}) => {
     return (
             <article className={styles.wrapper}>
                 <div className={styles.iconWrapper}>
-                    <Image src={icon} alt={title} width={25} height={25} />
+                    <Image src={icon} alt={t(title)} width={25} height={25} />
                 </div>
 
                 <h3 className={styles.title}>{t(title)}</h3>

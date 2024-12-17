@@ -1,4 +1,11 @@
 {
+  "alt": {
+    "logo": "Логотип Spicy Play",
+    "insta": "Іконка Instagram",
+    "googlePlay": "Іконка Google Play",
+    "appStore": "Іконка App Store",
+    "heroBanner": "Банер Spicy Play"
+  },
   "buttons": {
     "play": "Отримати гру",
     "download": "Завантажити"

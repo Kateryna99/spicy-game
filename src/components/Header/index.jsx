@@ -30,7 +30,7 @@ export const Header = () => {
                     <a className={styles.logo} href="/">
                         <Image
                             src={logo}
-                            alt='Spicy play logo'
+                            alt={t('alt.logo')}
                             className={styles.logoImg}
                         />
                     </a>

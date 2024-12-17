@@ -22,7 +22,7 @@ export const Hero = () => {
                             <Link href='/' className={styles.marketButton}>
                                 <Image
                                     src='/images/google_play.png'
-                                    alt='Go to Google Play'
+                                    alt={t('alt.googlePlay')}
                                     width={155}
                                     height={45}
                                 />
@@ -31,7 +31,7 @@ export const Hero = () => {
                             <Link href='/' className={styles.marketButton}>
                                 <Image
                                     src='/images/app_store.png'
-                                    alt='Go to App Store'
+                                    alt={t('alt.appStore')}
                                     width={155}
                                     height={45}
                                 />
@@ -44,7 +44,7 @@ export const Hero = () => {
                 <div className={styles.imageWrapper}>
                     <Image
                         src='/images/hero_banner.png'
-                        alt='Hero Banner'
+                        alt={t('alt.heroBanner')}
                         height={640}
                         width={1018}
                         className={styles.image}
