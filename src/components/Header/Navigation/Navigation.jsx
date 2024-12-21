@@ -6,9 +6,9 @@ import { useTranslations, useLocale } from 'next-intl';
 import { useRouter } from 'next/navigation';
 
 import {Languages} from "@UI/Languages/Languages";
+import {LaptopLanguages} from "@UI/Languages/LaptopLanguages/LaptopLanguages";
 
 import styles from './Navigation.module.scss';
-import {LaptopLanguages} from "@UI/Languages/LaptopLanguages/LaptopLanguages";
 
 export const Navigation = ({isOpen, handleMenuAction}) => {
    const t = useTranslations('headerNavigation');
