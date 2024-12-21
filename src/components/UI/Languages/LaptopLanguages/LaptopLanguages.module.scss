@@ -10,6 +10,11 @@
     align-items: flex-start;
 
     &:hover {
+      .languageItem.active {
+        border-color: #b94d6b;
+        background-color: transparent;
+      }
+
       .languageList {
          opacity: 1;
          visibility: visible;
