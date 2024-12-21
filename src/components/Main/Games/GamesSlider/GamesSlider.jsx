@@ -29,16 +29,19 @@ export const GamesSlider = ({gamesList}) => {
                     disableOnInteraction: false,
                     pauseOnMouseEnter: true,
                 }}
+                className={styles.slider}
             >
                 {gamesList.map(game => (
                     <SwiperSlide key={game.id}>
-                        <GamesCard
-                            {...game}
-                            activeIndex={activeIndex}
-                            sliderList={gamesList}
-                            setActiveIndex={setActiveIndex}
-                            swiperRef={swiperRef}
-                        />
+                        <div className={'container'}>
+                            <GamesCard
+                                {...game}
+                                activeIndex={activeIndex}
+                                sliderList={gamesList}
+                                setActiveIndex={setActiveIndex}
+                                swiperRef={swiperRef}
+                            />
+                        </div>
                     </SwiperSlide>
                 ))}
             </Swiper>

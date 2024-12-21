@@ -5,8 +5,10 @@
 
   @include onLaptopAndUp {
     display: block;
+
+    overflow: hidden;
   }
 }
 .slider {
-  height: 800px;
+  overflow: visible;
 }

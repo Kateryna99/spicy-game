@@ -5,7 +5,15 @@
   flex-direction: column;
   gap: 20px;
 
+  padding: 0 15px;
+
+  @include onTabletAndUp {
+    padding: 0 48px;
+  }
+
   @include onLaptopAndUp {
+    padding: 0;
+
     height: 700px;
 
     display: grid;
