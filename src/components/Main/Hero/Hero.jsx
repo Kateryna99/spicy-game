@@ -39,16 +39,16 @@ export const Hero = () => {
                         </div>
                         <Button text={t('buttons.play')}/>
                     </div>
-                </div>
 
-                <div className={styles.imageWrapper}>
-                    <Image
-                        src='/images/hero_banner.png'
-                        alt={t('alt.heroBanner')}
-                        height={640}
-                        width={1018}
-                        className={styles.image}
-                    />
+                    <div className={styles.imageWrapper}>
+                        <Image
+                            src='/images/hero_banner.png'
+                            alt={t('alt.heroBanner')}
+                            height={640}
+                            width={1018}
+                            className={styles.image}
+                        />
+                    </div>
                 </div>
             </div>
         </section>

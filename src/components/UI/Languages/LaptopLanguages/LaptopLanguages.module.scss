@@ -38,19 +38,22 @@
   transition: 0.3s ease-in-out;
 
   &.active {
-    border-color: $colorPrimary;
-
-    .text {
-      color: $colorPrimary;
-    }
-  }
-
-  @include onHover {
-    border-color: $colorWhite;
+    border-color: #584A55;
 
     .text {
       color: $colorWhite;
     }
+  }
+
+  @include onHover {
+    border-color: $colorSecondary;
+    background-color: $colorSecondary;
+
+  }
+
+  @include onActive {
+    background-color: #86124AB2;
+
   }
 }
 
@@ -68,11 +71,11 @@
   left: 0;
   z-index: 3;
 
-  padding-top: 5px;
+  padding-top: 12px;
 
   display: flex;
   flex-direction: column;
-  gap: 5px;
+  gap: 12px;
 
   opacity: 0;
   visibility: hidden;
