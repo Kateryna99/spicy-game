@@ -2,10 +2,6 @@
 
 .wrapper {
   padding: 60px 0;
-
-  @include onLaptopAndUp {
-    padding-bottom: 0;
-  }
 }
 
 .header {
