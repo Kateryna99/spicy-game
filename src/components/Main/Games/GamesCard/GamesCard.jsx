@@ -1,13 +1,17 @@
-import styles from './GamesCard.module.scss';
 import {useTranslations} from "next-intl";
-import Image from "next/image";
-import {Pagination} from "@UI/Pagination/Pagination";
+import classNames from "classnames";
 
-export const GamesCard = ({title, img, description, rotateDegree, activeIndex, sliderList, setActiveIndex, swiperRef }) => {
+import Image from "next/image";
+
+import styles from './GamesCard.module.scss';
+
+export const GamesCard = ({title, img, description, position}) => {
     const t = useTranslations("games");
 
     return (
-        <article className={styles.gameCard}>
+        <article className={classNames(styles.gameCard, {
+            [styles.position]: position,
+        })}>
             <div className={styles.header}>
                 <h5 className={styles.subtitle}>{t("title")}</h5>
 
@@ -15,17 +19,15 @@ export const GamesCard = ({title, img, description, rotateDegree, activeIndex, s
 
                 <p className={styles.text}>{t(description)}</p>
 
-                <Pagination activeIndex={activeIndex} sliderList={sliderList} setActiveIndex={setActiveIndex} swiperRef={swiperRef} />
             </div>
 
             <div className={styles.body}>
                <Image
                    src={img}
                    alt={t(title)}
-                   width={300}
+                   width={430}
                    height={500}
                    className={styles.gameImg}
-                   style={{transform: `rotate(${rotateDegree}deg)`}}
                />
             </div>
         </article>

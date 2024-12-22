@@ -8,6 +8,7 @@ import 'swiper/scss';
 import {GamesCard} from "@main/Games/GamesCard/GamesCard";
 
 import styles from './GamesSlider.module.scss';
+import classNames from "classnames";
 
 export const GamesSlider = ({gamesList}) => {
     const [activeIndex, setActiveIndex] = useState(0);
@@ -29,17 +30,15 @@ export const GamesSlider = ({gamesList}) => {
                     disableOnInteraction: false,
                     pauseOnMouseEnter: true,
                 }}
-                className={styles.slider}
+                className={classNames(styles.slider, {
+                    [styles.sliderActive]: activeIndex === 0
+                })}
             >
                 {gamesList.map(game => (
                     <SwiperSlide key={game.id}>
                         <div className={'container'}>
                             <GamesCard
                                 {...game}
-                                activeIndex={activeIndex}
-                                sliderList={gamesList}
-                                setActiveIndex={setActiveIndex}
-                                swiperRef={swiperRef}
                             />
                         </div>
                     </SwiperSlide>

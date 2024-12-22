@@ -3,22 +3,24 @@
 .gameCard {
   display: flex;
   flex-direction: column;
-  gap: 20px;
-
-  padding: 0 15px;
-
-  @include onTabletAndUp {
-    padding: 0 48px;
-  }
+  gap: 46px;
 
   @include onLaptopAndUp {
-    padding: 0;
-
-    height: 700px;
-
     display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-columns: repeat(2, minmax(200px, 1fr));
     align-items: center;
+  }
+
+  &.position {
+    .header {
+      grid-column: 2 / span 1;
+      grid-row: 1 / span 1;
+    }
+
+    .body {
+      grid-column: 1 / span 1;
+      grid-row: 1 / span 1;
+    }
   }
 }
 
@@ -42,65 +44,61 @@
 }
 
 .text {
-  max-width: 640px;
+  max-width: 600px;
   width: 100%;
 
   @include exceptLastChild {
     margin-bottom: 40px;
-  }
-
-  @include onLaptopAndUp {
-    max-width: 450px;
   }
 }
 
 .body {
   position: relative;
 
-  padding: 50px;
+  width: 100vw;
+  max-width: 430px;
+
+  height: 100vh;
+  max-height: 350px;
+
+  align-self: center;
 
   @include before {
     position: absolute;
-    bottom: 15%;
+    bottom: 10%;
     left: 50%;
     z-index: -1;
 
-    width: 250px;
-    height: 240px;
+    width: 200px;
+    height: 180px;
 
     display: block;
 
-    filter: blur(66px);
+    filter: blur(75px);
 
     background-color: $colorPrimary;
 
     transform: translateX(-50%);
 
     @include onTabletAndUp {
-      width: 450px;
-      height: 400px;
+      width: 400px;
+      height: 300px;
 
-      filter: blur(80px);
+      filter: blur(90px);
     }
 
     @include onLaptopAndUp {
-      left: 45%;
-      bottom: 15%;
-
-      width: 270px;
+      width: 250px;
       height: 250px;
     }
   }
 
   @include onTabletAndUp {
-    padding: 80px;
+    max-height: 580px;
   }
 
   @include onLaptopAndUp {
-    padding: 20px;
-
-    height: 75vh;
-    max-height: 620px;
+    justify-self: center;
   }
 }
 
@@ -109,4 +107,5 @@
   height: 100%;
 
   object-fit: contain;
+  object-position: center;
 }

@@ -1,15 +1,13 @@
 @import '../../../styles/generals';
 
 .wrapper {
-  padding-top: 20px;
+  @include onLaptopAndUp {
+    padding-top: 60px;
+  }
 }
 
 .gamesList {
   display: flex;
   flex-direction: column;
-  gap: 20px;
-
-  @include onLaptopAndUp {
-    display: none;
-  }
+  gap: 60px;
 }

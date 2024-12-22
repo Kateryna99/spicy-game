@@ -3,35 +3,35 @@ export const gamesList = [
         id: 1,
         title: 'scenario.title',
         description:'scenario.desc',
-        rotateDegree: '0',
-        img: '/images/games_first.png'
+        position: false,
+        img: '/images/game1.png'
     },
     {
         id: 2,
         title: 'questions.title',
         description:'questions.desc',
-        rotateDegree: '0',
-        img: '/images/games_first.png'
+        position: true,
+        img: '/images/game2.png'
     },
     {
         id: 3,
         title: 'quest.title',
         description:'quest.desc',
-        rotateDegree: '-15',
-        img: '/images/games_first.png'
+        position: false,
+        img: '/images/game3.png'
     },
     {
         id: 4,
         title: 'NeverHaveIEver.title',
         description:'NeverHaveIEver.desc',
-        rotateDegree: '0',
-        img: '/images/games_first.png'
+        position: true,
+        img: '/images/game2.png'
     },
     {
         id: 5,
         title: 'truthOrDare.title',
         description:'truthOrDare.desc',
-        rotateDegree: '0',
-        img: '/images/games_first.png'
+        position: false,
+        img: '/images/game1.png'
     },
 ]
