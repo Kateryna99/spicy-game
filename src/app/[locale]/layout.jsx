@@ -4,21 +4,20 @@ import { getMessages } from 'next-intl/server';
 import { notFound } from 'next/navigation';
 import { routing } from '@/i18n/routing';
 
-import '../globals.scss';
+import {Header} from "@components/Header";
+import {Footer} from "@components/Footer/Footer";
 
-export const metadata = {
-    title: 'Spicy Play',
-    description:
-        'Відкрийте для себе світ захоплюючих ігор з високим рівнем ризику та азарту. Spicy Play пропонує найкращі інтенсивні ігри для тих, хто шукає справжні виклики.',
-    openGraph: {
-        title: 'Spicy Play | Захоплюючі ігри на будь-який смак',
-        description:
-            'Зануртесь у світ Spicy Play, де вас чекають захоплюючі та ризиковані ігри з високим рівнем адреналіну та азарту. Вибирайте гру та випробуйте свою удачу!',
-        type: 'website',
-        locale: 'en-US',
-        siteName: 'Spicy Play',
-    },
-};
+import {metadata} from "@/constants/metadata";
+
+import { Poppins } from 'next/font/google';
+import '../globals.scss';
+import styles from "@/app/[locale]/page.module.scss";
+
+const poppins = Poppins({
+    subsets: ['latin', 'cyrillic'],
+    weight: ['400', '500', '600', '700'],
+    variable: '--font-poppins',
+});
 
 export default async function LocaleLayout({
                                                children,
@@ -33,7 +32,7 @@ export default async function LocaleLayout({
     const messages = await getMessages();
 
     return (
-        <html lang={locale}>
+        <html lang={locale} className={poppins.variable}>
         <Head>
             <title>{metadata.title}</title>
             <meta name="description" content={metadata.description} />
@@ -52,7 +51,13 @@ export default async function LocaleLayout({
         </Head>
         <body>
         <NextIntlClientProvider messages={messages}>
-            {children}
+            <div className={styles.wrapper}>
+                <Header/>
+
+                <main>{children}</main>
+
+                <Footer/>
+            </div>
         </NextIntlClientProvider>
         </body>
         </html>

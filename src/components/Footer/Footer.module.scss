@@ -31,6 +31,15 @@
     margin-bottom: 1rem;
   }
 
+  @include onLaptopAndUp {
+    width: 150px;
+    height: 75px;
+  }
+
+  @include onDesktopAndUp {
+    width: 188px;
+    height: 90px;
+  }
 }
 
 .links {
@@ -49,6 +58,14 @@
   @include onTabletAndUp {
     color: $colorWhite;
   }
+
+  @include onLaptopAndUp {
+    font-size: $text-18;
+  }
+
+  @include onDesktopAndUp {
+    font-size: $text-22;
+  }
 }
 
 .link {
@@ -66,6 +83,11 @@
 
   @include onHover {
     transform: $transformScale;
+  }
+
+  @include onLaptopAndUp {
+    width: 55px;
+    height: 55px;
   }
 }
 
@@ -93,6 +115,23 @@
 
 .marketButton {
   position: relative;
+
+  width: 155px;
+  height: 45px;
+
+  @include onLaptopAndUp {
+    width: 186px;
+    height: 55px;
+  }
+
+  @include onDesktopAndUp {
+    width: 216px;
+    height: 64px;
+  }
+}
+
+.button {
+  object-fit: contain;
 }
 
 .nav {
@@ -133,6 +172,14 @@
     &::before {
       width: 100%;
     }
+  }
+
+  @include onLaptopAndUp {
+    font-size: $text-18;
+  }
+
+  @include onDesktopAndUp {
+    font-size: $text-22;
   }
 }
 

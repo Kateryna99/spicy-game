@@ -11,6 +11,10 @@
   vertical-align: baseline;
 }
 
+:root {
+  font-family: var(--font-poppins), sans-serif;
+}
+
 html,
 body{
   height: 100%;
@@ -20,7 +24,7 @@ html {
 }
 
 body {
-  font-family: 'Poppins', sans-serif;
+  font-family: var(--font-poppins), sans-serif;
   font-weight: $fontWeightRegular;
   line-height: $lineHeightRegular;
 
@@ -78,6 +82,10 @@ button {
 
   @include onTabletAndUp {
     padding: 0 48px;
+  }
+
+  @include onLaptopAndUp {
+    padding: 0 15px;
   }
 }
 
