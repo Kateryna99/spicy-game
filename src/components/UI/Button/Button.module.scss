@@ -22,11 +22,11 @@
   transition: $transitionDuration;
 
   @include onHover {
-    filter: brightness(0.8);
+    background-color: $colorSecondary;
   }
 
   @include onActive {
-    filter: brightness(1);
+    background-color: rgba(134, 18, 74, 0.7);
   }
 
   @include onLaptopAndUp {
@@ -42,6 +42,10 @@
 
     background-color: $colorWhite;
     color: $colorPrimary;
+
+    @include onHover {
+      background-color: $colorBackground;
+    }
 
     @include onTabletAndUp {
       max-width: 285px;
