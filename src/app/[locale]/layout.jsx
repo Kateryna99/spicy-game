@@ -11,6 +11,7 @@ import {metadata} from "@/constants/metadata";
 
 import '../globals.scss';
 import styles from "@/app/[locale]/page.module.scss";
+import {poppins} from "@styles/fonts/fonts";
 
 export default async function LocaleLayout({
                                                children,
