@@ -17,6 +17,7 @@ const poppins = Poppins({
     subsets: ['latin', 'cyrillic'],
     weight: ['400', '500', '600', '700'],
     variable: '--font-poppins',
+    display: 'swap'
 });
 
 export default async function LocaleLayout({
