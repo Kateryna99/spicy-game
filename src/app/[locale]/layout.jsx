@@ -9,16 +9,8 @@ import {Footer} from "@components/Footer/Footer";
 
 import {metadata} from "@/constants/metadata";
 
-import { Poppins } from 'next/font/google';
 import '../globals.scss';
 import styles from "@/app/[locale]/page.module.scss";
-
-const poppins = Poppins({
-    subsets: ['latin', 'cyrillic'],
-    weight: ['400', '500', '600', '700'],
-    variable: '--font-poppins',
-    display: 'swap'
-});
 
 export default async function LocaleLayout({
                                                children,
