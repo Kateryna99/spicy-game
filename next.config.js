@@ -6,11 +6,6 @@ const withNextIntl = createNextIntlPlugin();
 const nextConfig = {
     reactStrictMode: true,
     swcMinify: true,
-    experimental: {
-        fontLoaders: [
-            { loader: '@next/font/google', options: { subsets: ['latin', 'cyrillic'] } },
-        ],
-    },
     webpack(config) {
         config.resolve.alias = {
             ...config.resolve.alias,
