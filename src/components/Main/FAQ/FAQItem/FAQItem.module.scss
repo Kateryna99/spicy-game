@@ -17,6 +17,12 @@
       transform: scale(1.2);
     }
   }
+
+  @include onLaptopAndUp {
+    padding: 24px;
+
+    border-radius: 24px;
+  }
 }
 
 .question {

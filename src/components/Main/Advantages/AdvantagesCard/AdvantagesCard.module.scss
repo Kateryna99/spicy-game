@@ -33,9 +33,17 @@
   }
 
 }
+.icon {
+  width: 30px;
+  height: 30px;
+
+  @include onLaptopAndUp {
+    width: 36px;
+    height: 36px;
+  }
+}
 
 .title {
-
   color: $colorWhite;
 
   font-size: $text-22;

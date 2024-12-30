@@ -97,14 +97,24 @@
     }
 
     @include onLaptopAndUp {
-      top: 15%;
+      width: 100%;
+      top: 10%;
 
-      filter: blur(65px);
+      height: 100px;
+
+      filter: blur(70px);
+    }
+
+    @include onDesktopAndUp {
+      top: 5%;
     }
   }
 
   @include onTabletAndUp {
     padding: 0 65px;
+  }
+  @include onDesktopAndUp{
+    padding: 0;
   }
 }
 

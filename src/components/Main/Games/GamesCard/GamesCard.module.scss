@@ -39,10 +39,18 @@
   @include onTabletAndUp {
     font-size: $text-16;
   }
+
+  @include onLaptopAndUp {
+    font-size: $text-20;
+  }
 }
 
 .title {
   @include titleMain;
+
+  @include onLaptopAndUp {
+    margin-bottom: 40px;
+  }
 }
 
 .text {

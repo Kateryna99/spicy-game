@@ -102,7 +102,7 @@
   }
 
   @include onTabletAndUp {
-   order: 4;
+    order: 4;
 
     flex-direction: column;
     gap: 2rem;
@@ -155,27 +155,10 @@
 
   font-size: $text-18;
 
-  @include before {
-    position: absolute;
-    bottom: -5px;
-    left: 0;
+  transition-duration: $transitionDuration;
 
-    width: 0;
-    height: 1px;
-
-    background-color: $colorWhite;
-
-    transition-duration: 0.3s;
-  }
-
-  @include onHover {
-    &::before {
-      width: 100%;
-    }
-  }
-
-  @include onLaptopAndUp {
-    font-size: $text-18;
+  &:hover {
+    color: $colorPrimary;
   }
 
   @include onDesktopAndUp {

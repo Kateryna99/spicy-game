@@ -78,7 +78,11 @@
   transition-duration: $transitionDuration;
 
   @include onHover {
-    color: $colorPrimary;
+    color: $colorSecondary;
+  }
+
+  @include onActive {
+    color: #86124AB2;
   }
 
   @include onTabletAndUp {
