@@ -9,6 +9,10 @@
   width: 100vw;
   height: 65px;
 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
   background-color: $colorBackground;
   border-bottom: 1px solid transparent;
 
