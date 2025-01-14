@@ -30,6 +30,8 @@
   width: 109px;
   height: 52px;
 
+  -webkit-user-select: none;
+
   @include exceptLastChild {
     margin-bottom: 1rem;
   }
