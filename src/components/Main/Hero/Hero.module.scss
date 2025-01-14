@@ -4,11 +4,7 @@
   padding: 125px 0 50px;
 
   @include onLaptopAndUp {
-    padding: 150px 0 120px;
-  }
-
-  @include onDesktopAndUp {
-    padding: 200px 0 180px;
+    padding: clamp(10.9vw, 10.9vw, 210px) 0 clamp(5vw, 5vw, 96px);
   }
 }
 
@@ -20,7 +16,7 @@
   margin-bottom: 100px;
 
   @include onLaptopAndUp {
-    margin-bottom: 65px;
+    margin-bottom: clamp(3.8vw, 3.8vw, 73px);
   }
 }
 
@@ -30,7 +26,11 @@
   text-align: center;
 
   @include exceptLastChild {
-    margin-bottom: 1.5rem;
+    margin-bottom: 24px;
+
+    @include onLaptopAndUp {
+      margin-bottom: clamp(0.4vw, 0.4vw, 9px);
+    }
   }
 }
 
@@ -38,15 +38,11 @@
   text-align: center;
 
   @include exceptLastChild {
-    margin-bottom: 1.5rem;
+    margin-bottom: 24px;
   }
 
   @include onLaptopAndUp {
-    font-size: $text-18;
-  }
-
-  @include onDesktopAndUp {
-    font-size: $text-22;
+    font-size: clamp(1.25vw, 1.25vw, 24px);
   }
 }
 
@@ -97,24 +93,22 @@
     }
 
     @include onLaptopAndUp {
-      width: 100%;
-      top: 10%;
+      top: 13%;
 
-      height: 100px;
+      height: 120px;
 
-      filter: blur(70px);
+      filter: blur(60px);
     }
 
-    @include onDesktopAndUp {
-      top: 5%;
-    }
   }
 
   @include onTabletAndUp {
     padding: 0 65px;
   }
-  @include onDesktopAndUp{
-    padding: 0;
+
+  @include onLaptopAndUp {
+    width: 71.3vw;
+    max-width: 1370px;
   }
 }
 

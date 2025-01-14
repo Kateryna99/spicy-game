@@ -25,7 +25,7 @@ export const GamesCard = ({title, img, description, position}) => {
                <Image
                    src={img}
                    alt={t(title)}
-                   width={430}
+                   width={530}
                    height={656}
                    className={styles.gameImg}
                />

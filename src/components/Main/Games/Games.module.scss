@@ -2,12 +2,16 @@
 
 .wrapper {
   @include onLaptopAndUp {
-    padding-top: 60px;
+    padding: clamp(3.3vw,3.3vw, 65px) 0 clamp(1.1vw, 1.1vw, 21px) 0;
   }
 }
 
 .gamesList {
   display: flex;
   flex-direction: column;
-  gap: 60px;
+  gap: 70px;
+
+  @include onLaptopAndUp {
+    gap: clamp(3.1vw, 3.1vw, 60px);
+  }
 }

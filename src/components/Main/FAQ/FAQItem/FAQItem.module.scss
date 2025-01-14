@@ -12,14 +12,16 @@
 
   cursor: pointer;
 
-  @include onHover {
-    .questionIcon {
-      transform: scale(1.2);
+  @media (hover: hover) {
+    @include onHover {
+      .questionIcon {
+        transform: scale(1.2);
+      }
     }
   }
 
   @include onLaptopAndUp {
-    padding: 24px;
+    padding: clamp(1.45vw, 1.45vw, 28px);
 
     border-radius: 24px;
   }
@@ -29,12 +31,15 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 1rem;
 
   transition: margin-bottom $transitionDuration ease-in-out;
 
   &.active {
-    margin-bottom: 1rem;
+    margin-bottom: 8px;
+
+    @include onLaptopAndUp {
+      margin-bottom: clamp(1vw, 1vw, 20px);
+    }
   }
 }
 
@@ -42,8 +47,12 @@
   font-weight: $fontWeightMedium;
   color: $colorWhite;
 
+  @include onTabletAndUp {
+    font-size: $text-18;
+  }
+
   @include onLaptopAndUp {
-    font-size: $text-24;
+    font-size: clamp(1.45vw, 1.45vw, 28px);
   }
 }
 
@@ -77,6 +86,13 @@
     transform: translate(-50%, -50%);
 
     background-color: $colorWhite;
+
+    @include onLaptopAndUp {
+      height: 2px;
+
+      width: 0.9vw;
+      max-width: 18px;
+    }
   }
 
   &::after {
@@ -90,6 +106,14 @@
       opacity: 0;
     }
   }
+
+  @include onLaptopAndUp {
+    width: 3vw;
+    max-width: 58px;
+
+    height: 3vw;
+    max-height: 58px;
+  }
 }
 
 .content {
@@ -102,6 +126,6 @@
   font-size: $text-14;
 
   @include onLaptopAndUp {
-    font-size: $text-18;
+    font-size: clamp(1.1vw, 1.1vw, 21px);
   }
 }

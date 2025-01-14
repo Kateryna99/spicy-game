@@ -15,8 +15,8 @@ export const Footer = () => {
                         <Image
                             src='/icons/logo.svg'
                             alt={t('alt.logo')}
-                            width={188}
-                            height={90}
+                            width={220}
+                            height={106}
                         />
                     </a>
 
@@ -25,10 +25,11 @@ export const Footer = () => {
 
                         <a href='/' className={styles.link}>
                             <Image
+                                className={styles.linkImg}
                                 src={'/icons/insta.svg'}
                                 alt={t('alt.insta')}
-                                width={27}
-                                height={27}
+                                width={31}
+                                height={31}
                             />
                         </a>
                     </div>
@@ -38,8 +39,8 @@ export const Footer = () => {
                             <Image
                                 src='/images/google_play.png'
                                 alt={t('alt.googlePlay')}
-                                width={216}
-                                height={64}
+                                width={253}
+                                height={75}
                                 className={styles.button}
                             />
                         </Link>
@@ -48,8 +49,8 @@ export const Footer = () => {
                             <Image
                                 src='/images/app_store.png'
                                 alt={t('alt.appStore')}
-                                width={216}
-                                height={64}
+                                width={253}
+                                height={75}
                                 className={styles.button}
                             />
                         </Link>

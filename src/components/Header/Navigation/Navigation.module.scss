@@ -50,6 +50,7 @@
   @include onLaptopAndUp {
     padding: 0;
 
+    gap: clamp(2.6vw, 2.6vw, 55px);
     flex-direction: row;
   }
 }
@@ -62,7 +63,7 @@
 
   @include onLaptopAndUp {
     flex-direction: row;
-    gap: 2.7rem;
+    gap: clamp(1.9vw, 1.9vw, 37px);
   }
 }
 
@@ -71,7 +72,7 @@
 
   display: flex;
 
-  font-size: $text-16;
+  font-size: $text-18;
   font-weight: $fontWeightMedium;
   color: $colorWhite;
 
@@ -92,6 +93,6 @@
   @include onLaptopAndUp {
     padding: 10px;
 
-    font-size: $text-18;
+    font-size: clamp(1.1vw, 1.1vw, 21px);
   }
 }

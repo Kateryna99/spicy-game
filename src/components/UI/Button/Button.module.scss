@@ -1,20 +1,19 @@
 @import '../../../styles/generals';
 
 .button {
-  max-width: 215px;
   width: 100%;
+  max-width: 230px;
 
-  padding: 7px 10px;
+  padding: 8px 10px;
 
   display: none;
   justify-content: center;
   align-items: center;
 
-  font-size: $text-18;
   font-weight: $fontWeightSemiBold;
   text-transform: uppercase;
 
-  border-radius: 48px;
+  border-radius: clamp(2.9vw, 2.9vw, 56px);
 
   color: $colorWhite;
   background-color: $colorPrimary;
@@ -30,15 +29,22 @@
   }
 
   @include onLaptopAndUp {
+    padding: clamp(0.5vw, 0.5vw, 10px);
+
     display: flex;
+
+    width: 13vw;
+    max-width: 250px;
+
+    font-size: clamp(1vw, 1vw, 20px);
   }
 
   &.secondary {
-    max-width: 230px;
-
     display: flex;
 
     text-transform: capitalize;
+
+    border-radius: 52px;
 
     background-color: $colorWhite;
     color: $colorPrimary;
@@ -51,6 +57,16 @@
       max-width: 285px;
 
       font-size: $text-24;
+    }
+
+    @include onLaptopAndUp {
+      width: 17vw;
+      max-width: 333px;
+
+      font-size: clamp(1.45vw, 1.45vw, 28px);
+      line-height: clamp(2.29vw, 2.29vw, 44px);
+
+      border-radius: clamp(3.9vw, 3.9vw, 75px);
     }
   }
 }

@@ -7,12 +7,15 @@
   grid-template-columns: minmax(0, 1fr);
   justify-items: center;
   align-items: center;
-  gap: 35px;
 
   @include onTabletAndUp {
     display: flex;
     justify-content: space-between;
     gap: 1rem;
+  }
+
+  @include onLaptopAndUp {
+    padding: clamp(1.35vw, 1.35vw, 26px) 0;
   }
 }
 
@@ -32,21 +35,29 @@
   }
 
   @include onLaptopAndUp {
-    width: 150px;
-    height: 75px;
-  }
+    width: 11.45vw;
+    max-width: 220px;
 
-  @include onDesktopAndUp {
-    width: 188px;
-    height: 90px;
+    height: 5.5vw;
+    max-height: 106px;
   }
 }
 
 .links {
+  margin-bottom: 35px;
+
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 10px;
+
+  @include onTabletAndUp {
+    margin-bottom: 0;
+  }
+
+  @include onLaptopAndUp {
+    gap: clamp(0.9vw, 0.9vw, 18px);
+  }
 }
 
 .followUs {
@@ -60,11 +71,7 @@
   }
 
   @include onLaptopAndUp {
-    font-size: $text-18;
-  }
-
-  @include onDesktopAndUp {
-    font-size: $text-22;
+    font-size: clamp(1.3vw, 1.3vw, 25px);
   }
 }
 
@@ -86,8 +93,24 @@
   }
 
   @include onLaptopAndUp {
-    width: 55px;
-    height: 55px;
+    width: 3.3vw;
+    max-width: 64px;
+
+    height: 3.3vw;
+    max-height: 64px;
+  }
+}
+
+.linkImg {
+  width: 20px;
+  height: 20px;
+
+  @include onLaptopAndUp {
+    width: 1.6vw;
+    max-width: 31px;
+
+    height: 1.6vw;
+    max-height: 31px;
   }
 }
 
@@ -111,6 +134,10 @@
       margin-bottom: 0;
     }
   }
+
+  @include onLaptopAndUp {
+    gap: clamp(2vw, 2vw, 40px);
+  }
 }
 
 .marketButton {
@@ -120,17 +147,18 @@
   height: 45px;
 
   @include onLaptopAndUp {
-    width: 186px;
-    height: 55px;
-  }
+    width: 13.1vw;
+    max-width: 253px;
 
-  @include onDesktopAndUp {
-    width: 216px;
-    height: 64px;
+    height: 3.9vw;
+    max-height: 75px;
   }
 }
 
 .button {
+  width: 100%;
+  height: 100%;
+
   object-fit: contain;
 }
 
@@ -138,18 +166,24 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 2rem;
+  gap: 15px;
 
   @include onTabletAndUp {
     order: 3;
 
     flex-direction: column;
-    gap: 1.2rem;
+    gap: 20px;
+  }
+
+  @include onLaptopAndUp {
+    gap: clamp(1.45vw, 1.45vw, 28px);
   }
 }
 
 .navLink {
   position: relative;
+
+  padding: 8px;
 
   color: $colorWhite;
 
@@ -161,8 +195,10 @@
     color: $colorPrimary;
   }
 
-  @include onDesktopAndUp {
-    font-size: $text-22;
+  @include onLaptopAndUp {
+    font-size: clamp(1.3vw, 1.3vw, 25px);
+
+    padding: clamp(0.6vw, 0.6vw, 12px);
   }
 }
 

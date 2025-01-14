@@ -85,7 +85,8 @@ button {
   }
 
   @include onLaptopAndUp {
-    padding: 0 15px;
+    width: 80.5vw;
+    max-width: 1546px;
   }
 }
 

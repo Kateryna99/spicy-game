@@ -16,18 +16,21 @@
       }
 
       .languageList {
-         opacity: 1;
-         visibility: visible;
+        opacity: 1;
+        visibility: visible;
 
-         transform: translateY(0);
+        transform: translateY(0);
       }
     }
   }
 }
 
 .languageItem {
-  width: 42px;
-  height: 42px;
+  width: 2.6vw;
+  max-width: 50px;
+
+  height: 2.6vw;
+  max-height: 50px;
 
   display: flex;
   justify-content: center;
@@ -64,6 +67,7 @@
 
 .text {
   text-transform: uppercase;
+  font-size: clamp(1.1vw, 1.1vw, 21px);
 
   color: $colorWhite;
 

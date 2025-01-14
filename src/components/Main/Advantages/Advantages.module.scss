@@ -2,6 +2,10 @@
 
 .wrapper {
   padding: 60px 0;
+
+  @include onLaptopAndUp {
+    padding: clamp(5.2vw, 5.2vw, 100px) 0;
+  }
 }
 
 .header {
@@ -15,10 +19,10 @@
   }
 
   @include onLaptopAndUp {
-    gap: 13px;
+    gap: clamp(0.7vw, 0.7vw, 15px);
 
     @include exceptLastChild {
-      margin-bottom: 40px;
+      margin-bottom: clamp(2vw, 2vw, 40px);
     }
   }
 }
@@ -41,7 +45,10 @@
   }
 
   @include onLaptopAndUp {
-    font-size: $text-22;
+    width: 64.2vw;
+    max-width: 1233px;
+
+    font-size: clamp(1.25vw, 1.25vw, 24px);
   }
 }
 
@@ -53,7 +60,10 @@
   gap: 1.5rem;
 
   @include onLaptopAndUp {
+    width: 75.5vw;
+    max-width: 1450px;
+
     grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 2.3rem;
+    gap: clamp(2.6vw, 2.6vw, 50px);
   }
 }

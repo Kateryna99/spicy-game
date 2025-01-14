@@ -68,11 +68,7 @@
   }
 
   @include onLaptopAndUp {
-    font-size: $text-52;
-  }
-
-  @include onDesktopAndUp {
-    font-size: $text-64;
+    font-size: clamp(3.8vw, 3.8vw, 74px);
   }
 }
 
@@ -87,11 +83,7 @@
   }
 
   @include onLaptopAndUp {
-    font-size: $text-36;
-  }
-
-  @include onDesktopAndUp {
-    font-size: $text-44;
+    font-size: clamp(2.6vw, 2.6vw, 50px);
   }
 }
 
