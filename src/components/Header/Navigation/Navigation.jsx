@@ -1,9 +1,9 @@
 'use client'
 
-import Link from "next/link";
 import classNames from "classnames";
 import { useTranslations, useLocale } from 'next-intl';
-import { useRouter } from 'next/navigation';
+
+import { Link, useRouter, usePathname } from '@/i18n/routing.js';
 
 import {Languages} from "@UI/Languages/Languages";
 import {LaptopLanguages} from "@UI/Languages/LaptopLanguages/LaptopLanguages";
@@ -13,12 +13,11 @@ import styles from './Navigation.module.scss';
 export const Navigation = ({isOpen, handleMenuAction}) => {
    const t = useTranslations('headerNavigation');
    const router = useRouter();
+   const pathname = usePathname();
    const localActive = useLocale();
 
    const handleLanguageChange = (locale) => {
-      const currentPath = router.asPath || '/';
-
-      router.push(`/${locale}${currentPath}`);
+      router.replace(pathname, { locale });
    }
 
    return (
